@@ -9,6 +9,8 @@ require "sinatra"
 require 'sinatra'
 require 'sinatra/activerecord'
 
+DB_CONFIG = YAML::load(File.open('config/database.yml'))
+set :database, "sqlite3:///portfolio.db"
 
 # The app
 
