@@ -1,13 +1,4 @@
-# Bundler
-require "rubygems"
-require "bundler/setup"
-
-# Sinatra
-require "sinatra"
-
-#active record
-require 'sinatra'
-require 'sinatra/activerecord'
+require_relative 'base'
 
 DB_CONFIG = YAML::load(File.open('config/database.yml'))
 set :database, "sqlite3:///portfolio.db"
