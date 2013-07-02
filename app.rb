@@ -9,7 +9,6 @@ require "sinatra"
 require 'sinatra'
 require 'sinatra/activerecord'
 
-set :database, "sqlite3:///portfolio.db"
 
 # The app
 
