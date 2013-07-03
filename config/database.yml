@@ -1,5 +1,0 @@
-production:
-  db_adapter:   "sqlite3"
-  db_location:  "db/production"
-  db_logfile:   "log/production_db.log"
-  db_loglevel:  :error

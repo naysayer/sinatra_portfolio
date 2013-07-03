@@ -1,26 +1,23 @@
-# Bundler
-require "rubygems"
-require "bundler/setup"
-
-#active record / sinatra
+require 'rubygems'
 require 'sinatra'
-require 'sinatra/activerecord'
+require 'data_mapper'
+require './seed'
 
-set :database, "sqlite:///portfolio.db"
+DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/dev.db")
 
-# The app
+class Project
+  include DataMapper::Resource
 
-# model
-class Project < ActiveRecord::Base
-  validates_presence_of :name
-  validates_presence_of :description
-  validates_presence_of :rank
+  property :id, Serial
+  property :name, String
+  property :description, Text
+  property :category, String
+  property :rank, Integer
 end
 
-#controller/routes
-class Portfolio < Sinatra::Base
-  get "/" do
-  	@projects = Project.all
-    erb :index
-  end
+DataMapper.finalize.auto_upgrade!
+
+get '/' do
+  @projects = Project.all
+  erb :index
 end

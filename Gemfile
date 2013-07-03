@@ -1,10 +1,5 @@
-source :rubygems
+source 'http://rubygems.org'
 
-gem 'sinatra'
-
-gem 'capistrano'
-
-gem "sqlite3"
-
-gem "activerecord"
-gem "sinatra-activerecord", :require => "sinatra/activerecord"
+gem "sinatra"
+gem "data_mapper"
+gem "dm-sqlite-adapter"

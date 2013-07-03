@@ -133,8 +133,8 @@
         <div class="row">
             <div class="span12">
                 <div class="title-page">
-                    <h2 class="title">Our Work</h2>
-                    <h3 class="title-description">Check Out Our Projects on <a href="#">Dribbble</a>.</h3>
+                    <h2 class="title">My Projects</h2>
+                    <h3 class="title-description">Check Out My Projects In Full Detail on <a href="https://github.com/naysayer">Github</a>.</h3>
                     
                     <div class="page-description">
                 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed ligula odio. Sed id metus felis. Ut pretium nisl non justo condimentum id tincidunt nunc faucibus. 
@@ -155,7 +155,7 @@
                     <ul id="filters" class="option-set" data-option-key="filter">
                     	<li class="type-work">Type of Work</li>
                         <li><a href="#filter" data-option-value="*" class="selected">All Projects</a></li>
-                        <li><a href="#filter" data-option-value=".design">Design</a></li>
+                        <li><a href="#filter" data-option-value=".ruby">Ruby on Rails</a></li>
                         <li><a href="#filter" data-option-value=".illustration">Illustration</a></li>
                         <li><a href="#filter" data-option-value=".photography">Photography</a></li>
                         <li><a href="#filter" data-option-value=".video">Video</a></li>
@@ -171,10 +171,10 @@
                         
                             <% @projects.each do |project| %>
 							<!-- Item Project and Filter Name -->
-                        	<li class="item-thumbs span3 design">
+                        	<%= "<li class='item-thumbs span3 #{project.category}'>" %>
                                 <!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                                <%= project.name.titleize %>
-                                <%= "<a class='hover-wrap fancybox' data-fancybox-group='gallery' title='The City' href='images/#{project.name}_large.png'>" %>
+                                <%= project.name.capitalize %>
+                                <%= "<a class='hover-wrap fancybox' data-fancybox-group='gallery' title=#{project.name} href='images/#{project.name}_large.png'>" %>
                                     <span class="overlay-img"></span>
                                     <span class="overlay-img-thumb font-icon-search"></span>
                                 </a>

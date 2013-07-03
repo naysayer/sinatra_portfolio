@@ -1,6 +1,6 @@
 require './app'
 
-require 'sinatra/activerecord/rake'
+# require 'sinatra/activerecord/rake'
 
 namespace :db do
   
@@ -8,7 +8,9 @@ namespace :db do
   task :populate => :db do
     
     puts "deleting data now"
-    Project.delete_all
+    Project.each do |project|
+    	project.destroy
+    end
 
     Project.create({:name => "team_builder", :description => "blah blach lah bas fdo ovma", :rank => 1})
     Project.create({:name => "cddn", :description => "blah blach lah bas fdo ovma", :rank => 2})
