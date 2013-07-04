@@ -164,9 +164,8 @@ CHAKRA.fancyBox = function(){
 		$(".fancybox").fancybox({				
 			padding : 0,
 			beforeShow: function () {
-				this.title = $(this.element).parent().find('img').next("div.project_title").html();
+				this.title = $(this.element).attr('title');
 				this.title = '<h4>' + this.title + '</h4>' + '<p>' + $(this.element).parent().find('img').next("div.desc").html() + '</p>';
-				console.log($(this.element).parent().next("div.desc").text())
 			},
 			helpers : {
 				title : { type: 'inside' },
