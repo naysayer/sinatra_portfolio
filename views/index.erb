@@ -174,12 +174,13 @@
                         	<%= "<li class='item-thumbs span3 #{project.category}'>" %>
                                 <!-- Fancybox - Gallery Enabled - Title - Full Image -->
                                 <%= project.display_name %>
-                                <%= "<a class='hover-wrap fancybox' data-fancybox-group='gallery' title=#{project.name} href='images/#{project.name}_large.png'>" %>
+                                <%= "<a class='hover-wrap fancybox' data-fancybox-group='gallery' href='images/#{project.name}_large.png'>" %>
                                     <span class="overlay-img"></span>
                                     <span class="overlay-img-thumb font-icon-search"></span>
                                 </a>
                                 <!-- Thumb Image and Description -->
                                 <%= "<img src='images/#{project.name}_thumb.png'/>"%>
+                                <div class="project_title hidden"><%= project.display_name %></div>
                                 <div class="desc hidden"><%= project.description.to_s %></div>
                             </li>
                         	<!-- End Item Project -->
