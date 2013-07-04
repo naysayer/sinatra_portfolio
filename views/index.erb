@@ -113,7 +113,7 @@
         <nav id="menu">
         	<ul id="menu-nav">
             	<li class="current"><a href="#home-slider">Home</a></li>
-                <li><a href="#work">Our Work</a></li>
+                <li><a href="#work">My Projects</a></li>
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="blog.html" class="external">Blog</a></li>
@@ -153,7 +153,7 @@
             	<!-- Filter -->
                 <nav id="options" class="work-nav">
                     <ul id="filters" class="option-set" data-option-key="filter">
-                    	<li class="type-work">Type of Work</li>
+                    	<li class="type-work">Type of Project</li>
                         <li><a href="#filter" data-option-value="*" class="selected">All Projects</a></li>
                         <li><a href="#filter" data-option-value=".ruby">Ruby on Rails</a></li>
                         <li><a href="#filter" data-option-value=".illustration">Illustration</a></li>
@@ -173,13 +173,14 @@
 							<!-- Item Project and Filter Name -->
                         	<%= "<li class='item-thumbs span3 #{project.category}'>" %>
                                 <!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                                <%= project.name.capitalize %>
+                                <%= project.display_name %>
                                 <%= "<a class='hover-wrap fancybox' data-fancybox-group='gallery' title=#{project.name} href='images/#{project.name}_large.png'>" %>
                                     <span class="overlay-img"></span>
                                     <span class="overlay-img-thumb font-icon-search"></span>
                                 </a>
                                 <!-- Thumb Image and Description -->
-                                <%= "<img src='images/#{project.name}_thumb.png' alt='#{project.description}' />"%>
+                                <%= "<img src='images/#{project.name}_thumb.png'/>"%>
+                                <div class="desc hidden"><%= project.description.to_s %></div>
                             </li>
                         	<!-- End Item Project -->
                             <% end %>

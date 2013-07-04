@@ -12,7 +12,7 @@ class Project
   property :name, String
   property :description, Text
   property :category, String
-  property :rank, Integer
+  property :display_name, String
 end
 
 DataMapper.finalize.auto_upgrade!
