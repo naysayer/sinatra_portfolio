@@ -156,8 +156,8 @@
                     	<li class="type-work">Type of Project</li>
                         <li><a href="#filter" data-option-value="*" class="selected">All Projects</a></li>
                         <li><a href="#filter" data-option-value=".ruby">Ruby on Rails</a></li>
-                        <li><a href="#filter" data-option-value=".illustration">Illustration</a></li>
-                        <li><a href="#filter" data-option-value=".photography">Photography</a></li>
+                        <li><a href="#filter" data-option-value=".wordpress">WordPress</a></li>
+                        <li><a href="#filter" data-option-value=".javascript">JavaScript</a></li>
                         <li><a href="#filter" data-option-value=".video">Video</a></li>
                     </ul>
                 </nav>
@@ -174,13 +174,14 @@
                         	<%= "<li class='item-thumbs span3 #{project.category}'>" %>
                                 <!-- Fancybox - Gallery Enabled - Title - Full Image -->
                                 <%= project.display_name %>
-                                <%= "<a class='hover-wrap fancybox' data-fancybox-group='gallery' title=#{project.display_name.to_s} href='images/#{project.name}_large.png'>" %>
+                                <%= "<a class='hover-wrap fancybox' data-fancybox-group='gallery' title=#{project.display_name} href='images/#{project.name}_large.png'>" %>
                                     <span class="overlay-img"></span>
                                     <span class="overlay-img-thumb font-icon-search"></span>
                                 </a>
                                 <!-- Thumb Image and Description -->
                                 <%= "<img src='images/#{project.name}_thumb.png'/>"%>
                                 <div class="desc hidden"><%= project.description.to_s %></div>
+                                <div class="project_title hidden"><%= project.display_name %></div>
                             </li>
                         	<!-- End Item Project -->
                             <% end %>
@@ -528,7 +529,7 @@
 <!-- End Contact Section -->
 
 <!-- Twitter Feed -->
-<div id="twitter-feed" class="page-alternate">
+<!-- <div id="twitter-feed" class="page-alternate">
 	<div class="container">
     	<div class="row">
             <div class="span12">
@@ -541,7 +542,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!-- End Twitter Feed -->
 
 <!-- Socialize -->
@@ -551,15 +552,10 @@
             <div class="span12">
                 <nav id="social">
                     <ul>
-                        <li><a href="https://twitter.com/Bluxart" title="Follow Me on Twitter" target="_blank"><span class="font-icon-social-twitter"></span></a></li>
-                        <li><a href="http://dribbble.com/Bluxart" title="Follow Me on Dribbble" target="_blank"><span class="font-icon-social-dribbble"></span></a></li>
-                        <li><a href="http://forrst.com/people/Bluxart" title="Follow Me on Forrst" target="_blank"><span class="font-icon-social-forrst"></span></a></li>
-                        <li><a href="http://www.behance.net/alessioatzeni" title="Follow Me on Behance" target="_blank"><span class="font-icon-social-behance"></span></a></li>
-                        <li><a href="https://www.facebook.com/Bluxart" title="Follow Me on Facebook" target="_blank"><span class="font-icon-social-facebook"></span></a></li>
-                        <li><a href="https://plus.google.com/105500420878314068694" title="Follow Me on Google Plus" target="_blank"><span class="font-icon-social-google-plus"></span></a></li>
-                        <li><a href="http://www.linkedin.com/in/alessioatzeni" title="Follow Me on LinkedIn" target="_blank"><span class="font-icon-social-linkedin"></span></a></li>
-                        <li><a href="http://themeforest.net/user/Bluxart" title="Follow Me on ThemeForest" target="_blank"><span class="font-icon-social-envato"></span></a></li>
-                        <li><a href="http://zerply.com/Bluxart/public" title="Follow Me on Zerply" target="_blank"><span class="font-icon-social-zerply"></span></a></li>
+                        <li><a href="https://twitter.com/naysaier" title="Follow Me on Twitter" target="_blank"><span class="font-icon-social-twitter"></span></a></li>
+                        <li><a href="http://naysaier.tumblr.com/" title="Follow Me on Tumblr" target="_blank"><span class="font-icon-social-tumblr"></span></a></li>
+                        <li><a href="https://github.com/naysayer" title="Follow Me on GitHub" target="_blank"><span class="font-icon-social-github"></span></a></li>
+                        <li><a href="mailto:joshuagregoryshuster@gmail.com" title="Email Me" target="_blank"><span class="font-icon-social-email"></span></a></li>
                     </ul>
                 </nav>
             </div>
