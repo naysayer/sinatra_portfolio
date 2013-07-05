@@ -1291,7 +1291,7 @@ nav#menu #menu-nav li a:hover {
 	-moz-box-shadow: none;
 	box-shadow: none;
 	
-	background: #26292E;
+	background: #2F3238;
     color: #FFFFFF;
     font-size: 16px;
     height: auto;
@@ -1734,4 +1734,10 @@ footer .credits {
       -ms-transition: none;
        -o-transition: none;
           transition: none;
+}
+.services_background{
+	background-color: #2F3238;
+}
+.dark_background{
+	background-color: #26292E;
 }
