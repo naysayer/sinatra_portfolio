@@ -77,7 +77,8 @@ CHAKRA.slider = function(){
 		thumb_links				:	0,			// Individual thumb links for each slide
 		thumbnail_navigation    :   0,			// Thumbnail navigation
 		slides 					:  	[			// Slideshow Images
-											{image : 'images/slider_images/background_one.png', title : '<div class="slide-content">Joshua Shuster | Web Developer</div>', thumb : '', url : ''}
+											{image : 'images/slider_images/background_one.png', title : '<div class="slide-content">Joshua Shuster | Web Developer</div>', thumb : '', url : ''},
+											{image : 'images/slider_images/background_two.png', title : '<div class="slide-content">Joshua Shuster | Web Developer</div>', thumb : '', url : ''}
 									],
 									
 		// Theme Options			   
