@@ -227,7 +227,7 @@
             <p>
                 My name is Joshua and I am a Programmer / Web Developer. Having the privilege of being born and raised in the heart of Silicone Valley; I was exposed to programming at a very young age via the Lego Mindstorms Programmable Computer. Little did I know that this elementary exposure to programming, would be the catalyst that now fuels my unquenchable thirst for learning. I strive to continue leaning new programming languages, as well as creating clean, well documented, and easily to read code. I now reside in the Los Angeles area where I work as a Web Developer / Programmer, and I also help out at <a href="http://missionaldigerati.org/">Missional Digerati</a>.
                 <br/><br/>
-                Outside the world of computing, my time is spent cultivating a wide verity of interests. Among a love for automobiles (both imports and domestic), I enjoy films, live music, tea, Star Trek; and more recently I find myself learning German and brushing up on my ASL (American Sign Language) in my free time. 
+                Outside the world of computing, my time is spent cultivating a wide verity of interests. Among a love for automobiles (both imports and domestic), I enjoy films, live music, tea, all things Star Trek; and more recently I find myself learning German and brushing up on my ASL (American Sign Language) in my free time. 
             </p>
             <div class="social">
                 <ul class="social-icons">
@@ -385,13 +385,8 @@
         <div class="span12">
             <div class="title-page">
                 <h2 class="title">Get in Touch</h2>
-                <h3 class="title-description">We’re currently accepting new client projects. We look forward to serving you.</h3>
+                <h3 class="title-description">Feel free to contact me with any questions regarding my services.</h3>
                 
-                <div class="page-description">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed ligula odio. Sed id metus felis. Ut pretium nisl non justo condimentum id tincidunt nunc faucibus. 
-                    Ut neque eros, pulvinar eu blandit quis, lacinia nec ipsum. Etiam vel orci ipsum. Sed eget velit ipsum. Duis in tortor scelerisque felis mattis imperdiet. Donec at libero tellus. 
-                    <a href="#">Suspendisse consectetur</a> consectetur bibendum. Pellentesque posuere, ligula volutpat elementum interdum, diam arcu elementum ipsum, vel ultricies est mauris ut nisi.</p>
-                </div>
             </div>
         </div>
     </div>
@@ -399,9 +394,11 @@
     
     <!-- Contact Form -->
     <div class="row">
+       <!--  %label{:for => "name"} Name:
+                %input{:type => "text", :name => "name", :class => "text"} -->
     	<div class="span9">
         
-        	<form id="contact-form" class="contact-form" action="#">
+        	<form id="contact-form" class="contact-form" action="/contact" method="post">
             	<p class="contact-name">
             		<input id="contact_name" type="text" placeholder="Full Name" value="" name="name" />
                 </p>
@@ -412,7 +409,7 @@
                 	<textarea id="contact_message" placeholder="Your Message" name="message" rows="15" cols="40"></textarea>
                 </p>
                 <p class="contact-submit">
-                	<a id="contact-submit" class="submit" href="#">Send Your Email</a>
+                    <input type="submit" value="Send Your Email" id="contact-submit">
                 </p>
                 
                 <div id="response">
